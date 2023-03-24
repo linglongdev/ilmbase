@@ -1,0 +1,23 @@
+package:
+  id: ilmbase
+  version: 2.2.1
+  kind: lib
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/ilmbase.git
+  version: master
+  commit: 06e5862ee82133fedac64324755ce8ec2d36f5c4
+  patch:
+  - 10_fix_testsuite_for_m68k
+  - bug788102.patch
+  - kfreebsd-support.patch
+  - testBoxAlgo.patch
+  - testBox.patch
+  - fix_FTCBFS.patch
+build:
+  kind: cmake
